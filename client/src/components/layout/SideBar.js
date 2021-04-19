@@ -49,7 +49,9 @@ export default class SideBar extends React.Component {
             <Link to="/api_tester">API Tester</Link>
           </Menu.Item>
           <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-            <Menu.Item key="3">Tom</Menu.Item>
+            <Menu.Item key="3">
+              <Link to="/client">Client</Link>
+            </Menu.Item>
             <Menu.Item key="4">Bill</Menu.Item>
             <Menu.Item key="5">Alex</Menu.Item>
           </SubMenu>

@@ -2,6 +2,8 @@
 import SideBar from "./components/layout/SideBar";
 import DirectoryPage from "./views/DirectoryPage";
 import API_Tester from "./components/utils/API_Tester";
+import ClientPage from "./components/api_utils/ClientPage";
+
 // React Dependencies
 import React from "react";
 import ReactDOM from "react-dom";
@@ -16,16 +18,6 @@ import "antd/dist/antd.css";
 import { Layout } from "antd";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 const { Header, Content, Footer } = Layout;
-
-/*
-    fetch("http://localhost:5000/items", {mode: 'no-cors'})
-      .then((response) => {
-        return console.log(response.text());
-      })
-      .then((data) => {
-          console.log(data);
-      });
-*/
 
 class App extends React.Component {
   constructor(props) {
@@ -49,6 +41,9 @@ class App extends React.Component {
                 </Route>
                 <Route path="/api_tester">
                   <API_Tester />
+                </Route>
+                <Route path="/client">
+                  <ClientPage />
                 </Route>
               </Switch>
             </Content>
