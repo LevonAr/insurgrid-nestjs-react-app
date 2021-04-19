@@ -15,7 +15,7 @@ import {
   Col,
 } from "react-bootstrap";
 
-function API_Tester() {
+function ClientsTable() {
   const ListLoading = WithListLoading(List);
   const [appState, setAppState] = useState({
     loading: false,
@@ -59,4 +59,4 @@ function API_Tester() {
     </>
   );
 }
-export default API_Tester;
+export default ClientsTable;

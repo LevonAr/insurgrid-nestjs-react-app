@@ -1,8 +1,10 @@
-import React from "react";
+import ClientsSidebar from "../layout/ClientsSideBar";
+
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "antd/dist/antd.css";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Layout, Menu } from "antd";
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -10,6 +12,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import ClientsTable from "../utils/ClientsTable";
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
@@ -19,7 +22,15 @@ export default class SideBar extends React.Component {
     super(props);
     this.state = {
       collapsed: false,
+      client: null,
     };
+  }
+
+  componentDidMount() {
+    const apiUrl = "http://localhost:5000/items";
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => this.setState({ client: data }));
   }
 
   onCollapse = (collapsed) => {
@@ -46,22 +57,16 @@ export default class SideBar extends React.Component {
             <Link to="/directory">Directory</Link>
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
-            <Link to="/api_tester">API Tester</Link>
+            <Link to="/api_tester">Analysis</Link>
           </Menu.Item>
-          <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-            <Menu.Item key="3">
-              <Link to="/client">Client</Link>
-            </Menu.Item>
-            <Menu.Item key="4">Bill</Menu.Item>
-            <Menu.Item key="5">Alex</Menu.Item>
+          <SubMenu key="sub1" icon={<UserOutlined />} title="Clients">
+            <ClientsSidebar />
           </SubMenu>
-          <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-            <Menu.Item key="6">Team 1</Menu.Item>
-            <Menu.Item key="8">Team 2</Menu.Item>
+          <SubMenu key="sub2" icon={<TeamOutlined />} title="Companies">
+            <Menu.Item key="6">All State</Menu.Item>
+            <Menu.Item key="8">Mercury</Menu.Item>
+            <Menu.Item key="10">Allianz</Menu.Item>
           </SubMenu>
-          <Menu.Item key="9" icon={<FileOutlined />}>
-            Files
-          </Menu.Item>
         </Menu>
       </Sider>
     );

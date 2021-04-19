@@ -1,5 +1,5 @@
-import ItemsTable from "../components/utils/ItemsTable";
+import ClientsTable from "../components/utils/ClientsTable";
 
 export default function DirectoryPage() {
-  return <ItemsTable />;
+  return <ClientsTable />;
 }

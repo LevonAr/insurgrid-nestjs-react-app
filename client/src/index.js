@@ -1,8 +1,7 @@
 // My Components
 import SideBar from "./components/layout/SideBar";
 import DirectoryPage from "./views/DirectoryPage";
-import API_Tester from "./components/utils/API_Tester";
-import ClientPage from "./components/api_utils/ClientPage";
+import API_Tester from "./components/utils/ClientsTable";
 
 // React Dependencies
 import React from "react";
@@ -41,9 +40,6 @@ class App extends React.Component {
                 </Route>
                 <Route path="/api_tester">
                   <API_Tester />
-                </Route>
-                <Route path="/client">
-                  <ClientPage />
                 </Route>
               </Switch>
             </Content>

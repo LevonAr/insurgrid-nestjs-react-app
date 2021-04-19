@@ -9,16 +9,20 @@ const List = (props) => {
         <tr>No repos, sorry</tr>
       </tbody>
     );
+  let styles = {
+    paddingLeft: "40px",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    borderTop: "none",
+  };
   return (
     <tbody>
       {repos.map((repo) => {
         return (
           <tr>
-            <td>
+            <td style={styles}>
               <Link to={repo.name}>{repo.name}</Link>
             </td>
-            <td>{repo.description}</td>
-            <td>{repo.quantity}</td>
           </tr>
         );
       })}
