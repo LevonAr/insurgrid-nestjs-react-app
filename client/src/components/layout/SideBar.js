@@ -51,21 +51,34 @@ export default class SideBar extends React.Component {
         collapsed={this.state.collapsed}
         onCollapse={this.onCollapse}
       >
-        <div className="logo" />
+        <img
+          src="https://uploads-ssl.webflow.com/5efbabdd706379633896a16e/5f5fd3909b54a778299a6a2f_InsurGrid-Logo.svg"
+          width="150"
+          alt="InsurGrid logo"
+          class="header-logo"
+          style={{
+            paddingLeft: "30px",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+          }}
+        ></img>
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           <Menu.Item key="1" icon={<PieChartOutlined />}>
             <Link to="/directory">Directory</Link>
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
-            <Link to="/api_tester">Analysis</Link>
+            <Link to="/analysis">Analysis</Link>
           </Menu.Item>
           <SubMenu key="sub1" icon={<UserOutlined />} title="Clients">
             <ClientsSidebar />
           </SubMenu>
           <SubMenu key="sub2" icon={<TeamOutlined />} title="Companies">
-            <Menu.Item key="6">All State</Menu.Item>
-            <Menu.Item key="8">Mercury</Menu.Item>
-            <Menu.Item key="10">Allianz</Menu.Item>
+            <Menu.Item key="6">Marsh & McLennan</Menu.Item>
+            <Menu.Item key="8">Progressive</Menu.Item>
+            <Menu.Item key="10">MetLife</Menu.Item>
+            <Menu.Item key="12">Philip Chaney</Menu.Item>
+            <Menu.Item key="14">Allstate</Menu.Item>
+            <Menu.Item key="16">Aflac</Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>

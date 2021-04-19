@@ -10,7 +10,7 @@ const List = (props) => {
       </tbody>
     );
   let styles = {
-    paddingLeft: "40px",
+    paddingLeft: "48px",
     paddingTop: "20px",
     paddingBottom: "20px",
     borderTop: "none",
@@ -21,7 +21,7 @@ const List = (props) => {
         return (
           <tr>
             <td style={styles}>
-              <Link to={repo.name}>{repo.name}</Link>
+              <Link to={`/clients/${repo.name}`}>{repo.name}</Link>
             </td>
           </tr>
         );

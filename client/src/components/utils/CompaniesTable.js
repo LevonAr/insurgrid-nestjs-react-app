@@ -49,55 +49,55 @@ export default class CompaniesTable extends React.Component {
                   <Table className="table-hover">
                     <thead>
                       <tr>
-                        <th className="border-0">Items</th>
+                        <th className="border-0">Rank</th>
                         <th className="border-0">Name</th>
-                        <th className="border-0">Salary</th>
+                        <th className="border-0">Industry</th>
                         <th className="border-0">Country</th>
-                        <th className="border-0">City</th>
+                        <th className="border-0">Market Cap</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td> </td>
-                        <td>$36,738</td>
-                        <td>Niger</td>
-                        <td>Oud-Turnhout</td>
+                        <td>Marsh & McLennan</td>
+                        <td>Insurance Brokers</td>
+                        <td>USA</td>
+                        <td>$55.7 Billion</td>
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>Minerva Hooper</td>
-                        <td>$23,789</td>
-                        <td>Curaçao</td>
-                        <td>Sinaai-Waas</td>
+                        <td>Progressive</td>
+                        <td>Property & Casualty Insurance</td>
+                        <td>USA</td>
+                        <td>$51 Billion</td>
                       </tr>
                       <tr>
                         <td>3</td>
-                        <td>Sage Rodriguez</td>
-                        <td>$56,142</td>
-                        <td>Netherlands</td>
-                        <td>Baileux</td>
+                        <td>MetLife</td>
+                        <td>Life Insurance</td>
+                        <td>USA</td>
+                        <td>$43.3 Billion</td>
                       </tr>
                       <tr>
                         <td>4</td>
                         <td>Philip Chaney</td>
-                        <td>$38,735</td>
-                        <td>Korea, South</td>
-                        <td>Overland Park</td>
+                        <td>Property & Casualty Insurance</td>
+                        <td>USA</td>
+                        <td>$34.4 Billion</td>
                       </tr>
                       <tr>
                         <td>5</td>
-                        <td>Doris Greene</td>
-                        <td>$63,542</td>
-                        <td>Malawi</td>
-                        <td>Feldkirchen in Kärnten</td>
+                        <td>Allstate</td>
+                        <td>Property & Casualty Insurance</td>
+                        <td>USA</td>
+                        <td>$32.6 Billion</td>
                       </tr>
                       <tr>
                         <td>6</td>
-                        <td>Mason Porter</td>
-                        <td>$78,615</td>
-                        <td>Chile</td>
-                        <td>Gloucester</td>
+                        <td>Aflac</td>
+                        <td>Life Insurance</td>
+                        <td>USA</td>
+                        <td>$31.7 Billion</td>
                       </tr>
                     </tbody>
                   </Table>

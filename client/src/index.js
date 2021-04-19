@@ -1,7 +1,8 @@
 // My Components
 import SideBar from "./components/layout/SideBar";
 import DirectoryPage from "./views/DirectoryPage";
-import API_Tester from "./components/utils/ClientsTable";
+import AnalysisPage from "./views/AnalysisPage";
+import ClientPage from "./views/ClientPage";
 
 // React Dependencies
 import React from "react";
@@ -38,9 +39,10 @@ class App extends React.Component {
                 <Route path="/directory">
                   <DirectoryPage />
                 </Route>
-                <Route path="/api_tester">
-                  <API_Tester />
+                <Route path="/analysis">
+                  <AnalysisPage />
                 </Route>
+                <Route path="/clients" component={ClientPage} />
               </Switch>
             </Content>
             <Footer style={{ textAlign: "center" }}>

@@ -15,10 +15,10 @@ const List = (props) => {
         return (
           <tr>
             <td>
-              <Link to={repo.name}>{repo.name}</Link>
+              <Link to={`/clients/${repo.name}`}>{repo.name}</Link>
             </td>
             <td>{repo.company}</td>
-            <td>{repo.quantity}</td>
+            <td>${repo.quantity}</td>
           </tr>
         );
       })}
