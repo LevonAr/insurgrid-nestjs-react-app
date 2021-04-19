@@ -1,5 +1,5 @@
 // My Components
-import SideBar from "./components/SideBar";
+import SideBar from "./components/layout/SideBar";
 import DirectoryPage from "./views/DirectoryPage";
 
 // React Dependencies
@@ -8,10 +8,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
+// Bootstrap Dependencies
+import "bootstrap/dist/css/bootstrap.min.css";
+
 // Ant D Dependencies
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 const { Header, Content, Footer } = Layout;
 
 /*
