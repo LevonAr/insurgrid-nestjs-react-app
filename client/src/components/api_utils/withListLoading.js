@@ -4,7 +4,7 @@ function WithListLoading(Component) {
   return function WithLoadingComponent({ isLoading, ...props }) {
     if (!isLoading) return <Component {...props} />;
     return (
-      <tbody style={{ textAlign: "center", fontSize: "30px" }}>
+      <tbody style={{ textAlign: "center", fontSize: "10px" }}>
         Hold on, fetching data may take some time :)
       </tbody>
     );

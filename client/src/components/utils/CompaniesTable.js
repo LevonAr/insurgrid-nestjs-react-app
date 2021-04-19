@@ -16,7 +16,7 @@ import {
   Col,
 } from "react-bootstrap";
 
-export default class ItemsTable extends React.Component {
+export default class CompaniesTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,9 +39,10 @@ export default class ItemsTable extends React.Component {
             <Col md="12">
               <Card className="card-plain table-plain-bg">
                 <Card.Header>
-                  <Card.Title as="h4">Clients Directory</Card.Title>
+                  <Card.Title as="h4">Companies Directory</Card.Title>
                   <p className="card-category">
-                    Here is a subtitle for this table
+                    Static Log of Company Information [Needs to be Connected to
+                    NestJS and MongoDB]
                   </p>
                 </Card.Header>
                 <Card.Body className="table-full-width table-responsive px-0">

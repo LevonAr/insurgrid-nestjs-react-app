@@ -17,7 +17,7 @@ const List = (props) => {
             <td>
               <Link to={repo.name}>{repo.name}</Link>
             </td>
-            <td>{repo.description}</td>
+            <td>{repo.company}</td>
             <td>{repo.quantity}</td>
           </tr>
         );
