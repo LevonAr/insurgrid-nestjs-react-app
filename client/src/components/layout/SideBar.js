@@ -46,7 +46,7 @@ export default class SideBar extends React.Component {
             <Link to="/directory">Directory</Link>
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
-            <Link to="/analysis">Analysis</Link>
+            <Link to="/api_tester">API Tester</Link>
           </Menu.Item>
           <SubMenu key="sub1" icon={<UserOutlined />} title="User">
             <Menu.Item key="3">Tom</Menu.Item>

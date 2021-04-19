@@ -1,7 +1,7 @@
 // My Components
 import SideBar from "./components/layout/SideBar";
 import DirectoryPage from "./views/DirectoryPage";
-
+import API_Tester from "./components/utils/API_Tester";
 // React Dependencies
 import React from "react";
 import ReactDOM from "react-dom";
@@ -46,6 +46,9 @@ class App extends React.Component {
               <Switch>
                 <Route path="/directory">
                   <DirectoryPage />
+                </Route>
+                <Route path="/api_tester">
+                  <API_Tester />
                 </Route>
               </Switch>
             </Content>

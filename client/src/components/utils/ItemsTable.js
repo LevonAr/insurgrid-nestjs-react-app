@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import List from "../api_utils/List";
+import WithListLoading from "../api_utils/withListLoading";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // react-bootstrap components
@@ -22,25 +24,14 @@ export default class ItemsTable extends React.Component {
     };
   }
 
-  componentWillMount() {
-    fetch("http://localhost:5000/items")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        this.setState({
-          itemsList: data,
-        });
-      });
+  componentDidMount() {
+    const apiUrl = "http://localhost:5000/items";
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => console.log("This is your data", data));
   }
 
   render() {
-    this.state.itemsList[0]
-      ? console.log(
-          "life:",
-          this.state.itemsList.forEach((element) => console.log(element))
-        )
-      : console.log("death");
     return (
       <>
         <Container>
