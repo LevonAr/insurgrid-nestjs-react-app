@@ -30,6 +30,12 @@ export default class SideBar extends React.Component {
   render() {
     return (
       <Sider
+        style={{
+          overflow: "auto",
+          height: "100vh",
+          position: "fixed",
+          left: 0,
+        }}
         collapsible
         collapsed={this.state.collapsed}
         onCollapse={this.onCollapse}

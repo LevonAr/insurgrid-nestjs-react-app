@@ -1,5 +1,6 @@
 // My Components
 import SideBar from "./components/SideBar";
+import DirectoryPage from "./views/DirectoryPage";
 
 // React Dependencies
 import React from "react";
@@ -34,14 +35,16 @@ class App extends React.Component {
         <Layout style={{ minHeight: "100vh" }}>
           <SideBar />
           <Layout className="site-layout">
-            <Header className="site-layout-background" style={{ padding: 0 }} />
-            <Content style={{ margin: "0 16px" }}>
-              <div className="site-layout-background">
-                <Switch>
-                  <Route />
-                  <Redirect from="/" to="/admin/dashboard" />
-                </Switch>
-              </div>
+            <Header
+              className="site-layout-background"
+              style={{ padding: 0, background: "#f0f2f5" }}
+            />
+            <Content style={{ paddingLeft: "200px", overflow: "initial" }}>
+              <Switch>
+                <Route path="/directory">
+                  <DirectoryPage />
+                </Route>
+              </Switch>
             </Content>
             <Footer style={{ textAlign: "center" }}>
               Developed For: InsurGrid | By: Levon_Ar © 2021
